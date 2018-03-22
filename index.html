@@ -51,12 +51,20 @@
        "retrigger" : true
     });
     
+    var borat = new Tone.Player({
+       "url" : "borat.mp3",
+       "retrigger" : true
+    });
+
     slap.connect(Tone.Master);
+    borat.connect(tone.Master);
 
     function mouseActions(event) {
         slap.start();
+        borat.start(2);
     }
     </script>
 
 </body>
 </html>
+
